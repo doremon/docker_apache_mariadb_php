@@ -20,7 +20,7 @@ RUN yum -y install systemd; yum clean all;
 RUN yum -y install net-tools; yum clean all;
 
 yum -y install epel-release
-yum -y install php php-mcrypt
+yum -y install php php-mcrypt php-pdo php-pdo_mysql
 
 # You HAVE to enable your service PRIOR to calling "init"
 # since the init call is what ultimately fires it up

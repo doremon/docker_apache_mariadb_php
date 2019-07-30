@@ -19,6 +19,9 @@ RUN yum -y install httpd; yum clean all;
 RUN yum -y install systemd; yum clean all;
 RUN yum -y install net-tools; yum clean all;
 
+yum -y install epel-release
+yum -y install php php-mcrypt
+
 # You HAVE to enable your service PRIOR to calling "init"
 # since the init call is what ultimately fires it up
 RUN systemctl enable httpd.service
